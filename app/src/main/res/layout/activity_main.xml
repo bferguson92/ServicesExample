@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <Button
+        style="@style/PlayerButtons"
+        android:id="@+id/button_play"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_pause"/>
+
+    <ImageView
+        style="@style/PlayerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintTop_toTopOf="@+id/button_play"
+        app:layout_constraintEnd_toEndOf="@+id/button_play"
+        app:layout_constraintStart_toStartOf="@+id/button_play"
+        app:layout_constraintBottom_toBottomOf="@+id/button_play"/>
+
+
+    <Button
+        style="@style/PlayerButtons"
+        android:id="@+id/button_pause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/button_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_stop">
+    </Button>
+
+    <ImageView
+        style="@style/PlayerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintEnd_toEndOf="@+id/button_pause"
+        app:layout_constraintStart_toStartOf="@+id/button_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/button_pause"/>
+
+    <Button
+        style="@style/PlayerButtons"
+        android:id="@+id/button_stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/button_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        style="@style/PlayerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:src="@drawable/ic_stop"
+        app:layout_constraintEnd_toEndOf="@+id/button_stop"
+        app:layout_constraintStart_toStartOf="@+id/button_stop"
+        app:layout_constraintBottom_toBottomOf="@+id/button_stop"/>
+
+
+    <TextView
+        android:id="@+id/text_view_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_play"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
